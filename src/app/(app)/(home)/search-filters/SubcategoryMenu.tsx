@@ -1,9 +1,9 @@
 import { Category } from "@/payload-types"
 import Link from "next/link";
-import { CustomCategory } from "../types";
+import { categoriesGetManyOutput } from "@/modules/categories/types";
 
 interface Props{
-    category : CustomCategory,
+    category : categoriesGetManyOutput[1],  // [1] means type of one item unlike whole array
     isOpen : boolean,
     position :{top: number, left : number}
 }

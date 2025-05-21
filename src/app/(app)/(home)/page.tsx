@@ -1,9 +1,10 @@
-
-export default async  function Home() {;
+"use client";
+export default  function Home() {
+  
 
   return (
     <div>
-      Home Page
+      Home
     </div>
   );
 }

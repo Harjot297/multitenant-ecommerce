@@ -1,14 +1,14 @@
 "use client"
 import CategoryDropdown from "./CategoryDropdown";
-import { CustomCategory } from "../types";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ListFilterIcon } from "lucide-react";
 import CategoriesSidebar from "./CategoriesSidebar";
+import { categoriesGetManyOutput } from "@/modules/categories/types";
 
 interface CategoryProps{
-    data : CustomCategory[];
+  data : categoriesGetManyOutput, // all array type 
 }
 
 const Categories = ({data} : CategoryProps) => {
@@ -60,7 +60,7 @@ const Categories = ({data} : CategoryProps) => {
     <div className="relative w-full ">
 
       {/* categories sidebar */}
-      <CategoriesSidebar open={isSidebarOpen} onOpenChange={setIsSidebarOpen} data={data} />
+      <CategoriesSidebar open={isSidebarOpen} onOpenChange={setIsSidebarOpen} />
 
       <div ref={measureRef} className="absolute opacity-0 pointer-events-none flex"
       style={{position: "fixed", top: -9999 , left: -9999}}>

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { NavbarSidebar } from "./navbar-sidebar";
+import { NavbarSidebar } from "@/modules/home/ui/components/navbar-sidebar";
 import { useState } from "react";
 import { MenuIcon } from "lucide-react";
 import { useTRPC } from "@/trpc/client";

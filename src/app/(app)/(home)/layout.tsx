@@ -1,11 +1,9 @@
 import configPromise from "@payload-config";
 import { getPayload } from "payload";
 
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import SearchFilters, { SearchFiltersSkeleton } from "./search-filters";
-import { Category } from "@/payload-types";
-import { CustomCategory } from "./types";
+import Footer from "@/modules/home/ui/components/Footer";
+import Navbar from "@/modules/home/ui/components/Navbar";
+import SearchFilters, { SearchFiltersSkeleton } from "../../../modules/home/ui/components/search-filters";
 import { getQueryClient, trpc } from "@/trpc/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import { Suspense } from "react";

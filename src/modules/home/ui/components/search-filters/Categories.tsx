@@ -87,7 +87,7 @@ const Categories = ({data} : CategoryProps) => {
         onMouseEnter={() => setIsAnyHovered(true)}
         onMouseLeave={() => setIsAnyHovered(false)}
       >
-
+        {/* TODO: Hardcode "all" button */}
         {
         data.slice(0,visibleCount).map( (category) => (
             <div key={category.id}>

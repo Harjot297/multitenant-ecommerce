@@ -10,13 +10,15 @@
     "generate:types": "payload generate:types",
     "db:fresh": "payload migrate:fresh",
     "db:seed": "bun run src/seed.ts",
-    "db:reset": "bun run db:fresh && bun run db:seed"
+    "db:reset": "bun run db:fresh && bun run db:seed",
+    "generate:importmap": "payload generate:importmap"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
     "@payloadcms/db-mongodb": "^3.37.0",
     "@payloadcms/next": "^3.37.0",
     "@payloadcms/payload-cloud": "^3.37.0",
+    "@payloadcms/plugin-multi-tenant": "3.37.0",
     "@payloadcms/richtext-lexical": "^3.37.0",
     "@radix-ui/react-accordion": "^1.2.10",
     "@radix-ui/react-alert-dialog": "^1.1.13",

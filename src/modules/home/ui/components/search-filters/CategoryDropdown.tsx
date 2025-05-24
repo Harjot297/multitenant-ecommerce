@@ -17,7 +17,7 @@ const CategoryDropdown = ({category , isActive , isNavigationHovered} : Props) =
    
     const [isOpen,setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
-    const {getDropdownPosition} = useDropdownPosition(dropdownRef)
+    // const {getDropdownPosition} = useDropdownPosition(dropdownRef)
     const onMouseEnter = () => {
         if(category.subcategories){
             setIsOpen(true);
@@ -26,7 +26,7 @@ const CategoryDropdown = ({category , isActive , isNavigationHovered} : Props) =
     const onMouseLeave = () => {
         setIsOpen(false);
     }
-    const dropdownPosition = getDropdownPosition();
+    // const dropdownPosition = getDropdownPosition();
     // Potentially improve mobile
     // const toggleDropdown = () => {
     //   if(category.subcategories?.docs?.length){
@@ -68,7 +68,7 @@ const CategoryDropdown = ({category , isActive , isNavigationHovered} : Props) =
       <SubcategoryMenu
         category = {category}
         isOpen = {isOpen}
-        position={dropdownPosition}
+        
       />
 
     </div>

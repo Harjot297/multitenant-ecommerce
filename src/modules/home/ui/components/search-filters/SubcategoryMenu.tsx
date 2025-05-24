@@ -5,10 +5,10 @@ import { categoriesGetManyOutput } from "@/modules/categories/types";
 interface Props{
     category : categoriesGetManyOutput[1],  // [1] means type of one item unlike whole array
     isOpen : boolean,
-    position :{top: number, left : number}
+    
 }
 
-const SubcategoryMenu = ({category , isOpen , position} : Props) => {
+const SubcategoryMenu = ({category , isOpen } : Props) => {
 
     if(!isOpen || !category.subcategories || category.subcategories.length === 0){
         return null;
@@ -17,7 +17,7 @@ const SubcategoryMenu = ({category , isOpen , position} : Props) => {
     const backgroundColor = category.color || "#F5F5F5"
 
   return (
-    <div className="fixed z-100" style={{top : position.top, left: position.left}}>
+    <div className="absolute z-100" style={{top : "100%", left: 0}}>
         {/* {Invisible bridge to maintain hover} */}
         <div className="h-3 w-60" />
         <div style={{backgroundColor}}

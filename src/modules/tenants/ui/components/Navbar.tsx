@@ -69,7 +69,7 @@ export const Navbar = ({ slug }: Props) => {
     </nav>
   );
 };
-
+// Hola
 export const NavbarSkeleton = () => {
   return (
     <nav className="h-20 border-b font-medium bg-white">

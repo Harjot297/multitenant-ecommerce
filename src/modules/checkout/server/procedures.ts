@@ -22,6 +22,7 @@ export const checkoutRouter = createTRPCRouter({
     const products = await ctx.db.find({
       collection: "products",
       depth: 2,
+      
       where: {
         and: [
           {
@@ -124,7 +125,10 @@ export const checkoutRouter = createTRPCRouter({
           id: {
             in: input.ids
           }
-        }
+        },
+        // select: {
+        //   content: false,
+        // },
       });
       
       if(data.totalDocs !== input.ids.length){

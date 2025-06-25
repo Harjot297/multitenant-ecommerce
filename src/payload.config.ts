@@ -28,6 +28,10 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    components: {
+      beforeNavLinks: ["@/components/stripe-verify#StripeVerify"],
+      afterNavLinks: ["@/components/stripe-verify#BackWebsite"],
+    },
   },
   collections: [Users, Media , Categories , Products , Tags , Tenants , Orders , Reviews],
   editor: lexicalEditor(),

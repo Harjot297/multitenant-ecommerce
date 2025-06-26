@@ -81,6 +81,11 @@ export const checkoutRouter = createTRPCRouter({
             "tenant.slug" : {
               equals: input.tenantSlug,
             }
+          },
+          {
+            isArchived: {
+              not_equals: true,
+            },
           }
         ]
       }
@@ -190,9 +195,18 @@ export const checkoutRouter = createTRPCRouter({
         collection: "products",
         depth: 2, // ensures image and category , tenant , and also tenant.image(depth 2) is populated
         where: {
-          id: {
-            in: input.ids
-          }
+          and: [
+            {
+              id: {
+                in: input.ids
+              }
+            },
+            {
+              isArchived: {
+                not_equals: true,
+              }
+            },
+          ],
         },
         // select: {
         //   content: false,

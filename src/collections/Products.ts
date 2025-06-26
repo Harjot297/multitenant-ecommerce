@@ -12,6 +12,7 @@ export const Products: CollectionConfig = {
             return Boolean(tenant?.stripeDetailsSubmitted);
 
         },
+        delete: ({req}) => isSuperAdmin(req.user),
     },
     admin: {
         useAsTitle: "name",
@@ -26,7 +27,7 @@ export const Products: CollectionConfig = {
         {
              // TODO: CHANGE TO RICHTEXT
             name: "description",
-            type: "text",
+            type: "richText",
         },
         {
             name: "price",
@@ -66,8 +67,8 @@ export const Products: CollectionConfig = {
         },
         {
             name: "content",
-            // TODO: CHANGE TO RICHTEXT
-            type: "textarea",
+            type: "richText",
+            
             admin: {
                 description:
                     `Protected content only visible to customers after purchase. Add product documentation,
@@ -75,6 +76,29 @@ export const Products: CollectionConfig = {
                     Formatting`
             },
         },
+        {
+            name: "isArchived",
+            label: "Archive",
+            defaultValue: false, // if we dont do this , default wil be "null" or "undefined"
+            // also , we did not_equals: true in procedures so that product gets loaded only if
+            // isArchived is false
+            type: "checkbox",
+            admin: {
+                description: "If checked, this product will be archived",
+            }
+        },
+        {
+            name: "isPrivate",
+            label: "Private",
+            defaultValue: false, // if we dont do this , default wil be "null" or "undefined"
+            // also , we did not_equals: true in procedures so that product gets loaded only if
+            // isArchived is false
+            type: "checkbox",
+            admin: {
+                description: "If checked, this product will not be shown on public storefront",
+            }
+        }
+
 
     ],
 }

@@ -12,6 +12,7 @@ import {  CheckIcon, LinkIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
+import {defaultJSXConverters, RichText} from "@payloadcms/richtext-lexical/react"
 
 import dynamic from "next/dynamic";
 import { toast } from "sonner";
@@ -101,7 +102,7 @@ export const ProductView = ({ productId, tenantSlug }: Props) => {
             </div>
             <div className="p-6 ">
               {data.description ? (
-                <p>{data.description}</p>
+                <RichText data={data.description} />
               ) : (
                 <p className="font-medium text-muted-foreground italic">
                   No Description Provided
@@ -172,3 +173,19 @@ export const ProductView = ({ productId, tenantSlug }: Props) => {
     </div>
   );
 };
+
+
+export const ProductViewSkeleton = () => {
+  return (
+    <div className="border rounded-sm bg-white overflow-hidden">
+        <div className="relative aspect-[3.9] border-b">
+          <Image
+            src={ "/placeholder.png"}
+            alt={"Placeholder"}
+            fill
+            className="object-cover"
+          />
+      </div>
+    </div>
+  );
+}

@@ -1,10 +1,8 @@
 import z from "zod";
 import { baseProcedure, createTRPCRouter, protectedProcedure } from "@/trpc/init";
-import type { Sort, Where } from "payload";
-import CategoryDropdown from "@/modules/home/ui/components/search-filters/CategoryDropdown";
-import { Category, Media, Tenant } from "@/payload-types";
+import {  Media, Tenant } from "@/payload-types";
 
-import { DEFAULT_LIMIT, PLATFORM_FEE_PERCENTAGE } from "@/constants";
+import { PLATFORM_FEE_PERCENTAGE } from "@/constants";
 import { TRPCError } from "@trpc/server";
 import Stripe from "stripe";
 import { CheckoutMetaData, ProductMetaData } from "../types";

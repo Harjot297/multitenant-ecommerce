@@ -1,5 +1,4 @@
-import configPromise from "@payload-config";
-import { getPayload } from "payload";
+
 
 import Footer from "@/modules/home/ui/components/Footer";
 import Navbar from "@/modules/home/ui/components/Navbar";

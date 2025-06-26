@@ -3,7 +3,6 @@ import { DEFAULT_LIMIT } from "@/constants";
 import { useTRPC } from "@/trpc/client";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { LoaderIcon } from "lucide-react";
-import { useDynamicRouteParams } from "next/dist/server/app-render/dynamic-rendering";
 
 interface Props{
     value?: string[] | null;

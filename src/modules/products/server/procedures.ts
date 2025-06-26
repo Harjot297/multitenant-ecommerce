@@ -1,7 +1,6 @@
 import z from "zod";
 import { baseProcedure, createTRPCRouter } from "@/trpc/init";
 import type { Sort, Where } from "payload";
-import CategoryDropdown from "@/modules/home/ui/components/search-filters/CategoryDropdown";
 import { Category, Media, Tenant } from "@/payload-types";
 import { sortValues } from "../search-params";
 import { DEFAULT_LIMIT } from "@/constants";

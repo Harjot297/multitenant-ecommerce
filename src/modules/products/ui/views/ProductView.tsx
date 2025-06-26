@@ -12,7 +12,7 @@ import {  CheckIcon, LinkIcon, StarIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useState } from "react";
-import {defaultJSXConverters, RichText} from "@payloadcms/richtext-lexical/react"
+import { RichText} from "@payloadcms/richtext-lexical/react"
 
 import dynamic from "next/dynamic";
 import { toast } from "sonner";

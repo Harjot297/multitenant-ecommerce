@@ -2,14 +2,12 @@
 import { useTRPC } from "@/trpc/client";
 import {
   useSuspenseInfiniteQuery,
-  useSuspenseQuery,
 } from "@tanstack/react-query";
 import { useProductFilters } from "../../hooks/use-product-filters";
 import { ProductCard, ProductCardSkeleton } from "./product-card";
 import { DEFAULT_LIMIT } from "@/constants";
 import { Button } from "@/components/ui/button";
 import { InboxIcon } from "lucide-react";
-import { ProvidedRequiredArgumentsOnDirectivesRule } from "graphql/validation/rules/ProvidedRequiredArgumentsRule";
 import { cn } from "@/lib/utils";
 
 interface Props {

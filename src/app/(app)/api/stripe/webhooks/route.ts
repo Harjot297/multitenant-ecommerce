@@ -4,8 +4,6 @@ import config from "@payload-config"
 import { NextResponse } from "next/server"
 
 import { stripe } from "@/lib/stripe"
-import { StringValueNode } from "graphql"
-import { error } from "console"
 import { ExpandedLineItem } from "@/modules/checkout/types"
 
 export async function POST(req: Request){
@@ -18,7 +16,7 @@ export async function POST(req: Request){
             process.env.STRIPE_WEBHOOK_SECRET as string,
         );
     }
-    catch (err){
+    catch (error){
         const errorMessage = error instanceof Error ? error.message : "Unknown error";
         if(error! instanceof Error){
             console.log(error);

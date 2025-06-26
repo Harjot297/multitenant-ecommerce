@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useRef, useState } from "react";
-import { useDropdownPosition } from "./use-dropdown-position";
 import SubcategoryMenu from "./SubcategoryMenu";
 import Link from "next/link";
 import { categoriesGetManyOutput } from "@/modules/categories/types";

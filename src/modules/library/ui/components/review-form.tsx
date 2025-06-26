@@ -17,7 +17,6 @@ import { StarPicker } from "@/components/star-picker";
 
 import { ReviewsGetOneOutput } from "@/modules/reviews/types";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { init } from "next/dist/compiled/webpack/webpack";
 import { toast } from "sonner";
 
 interface Props {

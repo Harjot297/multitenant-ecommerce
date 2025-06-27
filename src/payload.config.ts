@@ -59,6 +59,7 @@ export default buildConfig({
     multiTenantPlugin<Config>({
       collections: {
         products: {}, // which collection is tied to tenant
+        media: {},
       },
       tenantsArrayField: {
         includeDefaultField: false,
